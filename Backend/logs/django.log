@@ -873,3 +873,26 @@ Not Found: /manifest.json
 Not Found: /.well-known/appspecific/com.chrome.devtools.json
 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 2695
 "POST /graphql/ HTTP/1.1" 200 166
+Watching for file changes with StatReloader
+"OPTIONS /graphql/ HTTP/1.1" 200 0
+"OPTIONS /graphql/ HTTP/1.1" 200 0
+"OPTIONS /graphql/ HTTP/1.1" 200 0
+Not Found: /manifest.json
+Not Found: /favicon.ico
+"GET /manifest.json HTTP/1.1" 404 2588
+"GET /favicon.ico HTTP/1.1" 404 2582
+"POST /graphql/ HTTP/1.1" 200 943
+"POST /graphql/ HTTP/1.1" 200 7104
+"POST /graphql/ HTTP/1.1" 200 1527
+"POST /graphql/ HTTP/1.1" 200 44595
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 23370
+Watching for file changes with StatReloader
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 943
+"POST /graphql/ HTTP/1.1" 200 7104
+"POST /graphql/ HTTP/1.1" 200 1527
+"POST /graphql/ HTTP/1.1" 200 23370
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 44595
