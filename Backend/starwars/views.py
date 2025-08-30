@@ -5,13 +5,11 @@ from django.db.models import Q
 from .models import Person, Film, Planet, Species
 import json
 
-# Imports para Django REST Framework y documentación
 from rest_framework.decorators import api_view
 from drf_yasg.utils import swagger_auto_schema
 from drf_yasg import openapi
 
 
-# Parámetros comunes para la documentación
 name_param = openapi.Parameter(
     'name',
     openapi.IN_QUERY,
@@ -42,7 +40,6 @@ page_size_param = openapi.Parameter(
     maximum=100
 )
 
-# Respuestas comunes
 error_response = openapi.Response(
     description="Error en la operación",
     schema=openapi.Schema(
@@ -199,23 +196,19 @@ def characters_list_view(request):
     GET /api/characters/?name=luke&page=1&page_size=10
     """
     try:
-        # Filtros
+        
         name_filter = request.GET.get('name', '')
         page = int(request.GET.get('page', 1))
         page_size = min(int(request.GET.get('page_size', 20)), 100)
         
-        # Query optimizado con select_related y prefetch_related
         queryset = Person.objects.select_related('homeworld').prefetch_related('films')
         
-        # Filtrar por nombre si se proporciona
         if name_filter:
             queryset = queryset.filter(name__icontains=name_filter)
         
-        # Paginación
         paginator = Paginator(queryset, page_size)
         page_obj = paginator.get_page(page)
         
-        # Serializar datos
         characters = []
         for character in page_obj:
             characters.append({
@@ -365,21 +358,16 @@ def character_films_view(request, character_id):
             'films__planets'
         ).get(id=character_id)
         
-        # Serializar películas con TODOS los detalles requeridos
         films = []
         for film in character.films.all().order_by('episode_id'):
             films.append({
                 'id': str(film.id),
                 'title': film.title,
                 'episode_id': film.episode_id,
-                # TEXTO DE APERTURA (requerido)
                 'opening_crawl': film.opening_crawl,
-                # DIRECTOR (requerido)
                 'director': film.director,
-                # PRODUCTORES (requerido)
                 'producer': film.producer,
                 'release_date': film.release_date.isoformat(),
-                # PLANETAS QUE APARECEN (requerido)
                 'planets': [
                     {
                         'id': str(planet.id),
@@ -394,7 +382,6 @@ def character_films_view(request, character_id):
                         'orbital_period': planet.orbital_period,
                     } for planet in film.planets.all()
                 ],
-                # OTROS DATOS RELEVANTES
                 'character_count': film.characters.count(),
                 'created': film.created.isoformat(),
                 'swapi_url': film.swapi_url,
