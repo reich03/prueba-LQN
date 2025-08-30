@@ -659,6 +659,7 @@ def planets_list_view(request):
                 'film_count': planet.films.count(),
             })
         
+        
         return JsonResponse({
             'results': planets_data,
             'count': len(planets_data)
