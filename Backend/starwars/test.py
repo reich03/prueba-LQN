@@ -54,16 +54,12 @@ class ModelsTestCase(TestCase):
         self.assertEqual(str(self.person), "Luke Skywalker")
 
     def test_relationships(self):
-        # Add person to film
         self.person.films.add(self.film)
         self.film.planets.add(self.planet)
         
-        # Test relationships
         self.assertIn(self.person, self.film.characters.all())
         self.assertIn(self.film, self.person.films.all())
         self.assertIn(self.planet, self.film.planets.all())
-        
-        # Test counts
         self.assertEqual(self.person.film_count, 1)
 
     def test_planet_residents(self):
@@ -74,7 +70,6 @@ class GraphQLTestCase(TestCase):
     def setUp(self):
         self.client = Client(schema)
         
-        # Create test data
         self.planet = Planet.objects.create(
             name="Alderaan",
             climate="temperate",
@@ -336,7 +331,6 @@ class MutationTestCase(TestCase):
         self.assertEqual(data['errors'], [])
         self.assertEqual(data['film']['title'], 'Revenge of the Sith')
         
-        # Verify film was created and linked to planet
         film = Film.objects.get(title='Revenge of the Sith')
         self.assertIn(self.planet, film.planets.all())
 
@@ -365,13 +359,11 @@ class MutationTestCase(TestCase):
         self.assertIsNone(data['person'])
 
 
-# Integration Tests
 @pytest.mark.django_db
 class IntegrationTestCase(TestCase):
     def setUp(self):
         self.client = Client(schema)
         
-        # Create a complex scenario with multiple related objects
         self.planets = [
             Planet.objects.create(name="Tatooine", climate="arid"),
             Planet.objects.create(name="Alderaan", climate="temperate"),
@@ -454,14 +446,12 @@ class IntegrationTestCase(TestCase):
         films = result['data']['allFilms']['edges']
         self.assertEqual(len(films), 2)
         
-        # Verify each film has characters and planets
         for film_edge in films:
             film = film_edge['node']
             self.assertGreater(len(film['characters']['edges']), 0)
             self.assertGreater(len(film['planets']['edges']), 0)
 
     def test_search_and_filter_integration(self):
-        # Search for Luke
         query = '''
             query {
                 searchPeople(name: "Luke") {

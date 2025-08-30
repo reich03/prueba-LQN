@@ -896,3 +896,583 @@ Not Found: /manifest.json
 "POST /graphql/ HTTP/1.1" 200 23370
 "POST /graphql/ HTTP/1.1" 200 37138
 "POST /graphql/ HTTP/1.1" 200 44595
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Bad Request: /graphql/
+Bad Request: /graphql/
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 127
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 127
+"POST /graphql/ HTTP/1.1" 400 125
+"POST /graphql/ HTTP/1.1" 400 127
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+Bad Request: /graphql/
+Bad Request: /graphql/
+Bad Request: /graphql/
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 127
+"POST /graphql/ HTTP/1.1" 400 127
+"POST /graphql/ HTTP/1.1" 400 125
+"POST /graphql/ HTTP/1.1" 400 127
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 127
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 125
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 127
+Watching for file changes with StatReloader
+Not Found: /main.f85aaf012cd8b476f9a8.hot-update.json
+"GET /main.f85aaf012cd8b476f9a8.hot-update.json HTTP/1.1" 404 2672
+Bad Request: /graphql/
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 127
+"POST /graphql/ HTTP/1.1" 400 127
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 125
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 127
+Bad Request: /graphql/
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 125
+"POST /graphql/ HTTP/1.1" 400 127
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 127
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 127
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 127
+Bad Request: /graphql/
+Bad Request: /graphql/
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 127
+"POST /graphql/ HTTP/1.1" 400 127
+"POST /graphql/ HTTP/1.1" 400 125
+"GET /graphql/ HTTP/1.1" 200 2611
+"GET /static/graphene_django/graphiql.js HTTP/1.1" 200 4037
+"POST /graphql/ HTTP/1.1" 200 54449
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2584
+"POST /graphql/ HTTP/1.1" 200 166
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 104
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 126
+Watching for file changes with StatReloader
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+Bad Request: /graphql/
+Bad Request: /graphql/
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 127
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 127
+"POST /graphql/ HTTP/1.1" 400 127
+"POST /graphql/ HTTP/1.1" 400 125
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 127
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 125
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 127
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 125
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 127
+Bad Request: /graphql/
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 125
+"POST /graphql/ HTTP/1.1" 400 127
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 127
+Watching for file changes with StatReloader
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+Bad Request: /graphql/
+Bad Request: /graphql/
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 127
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 127
+"POST /graphql/ HTTP/1.1" 400 127
+"POST /graphql/ HTTP/1.1" 400 125
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 127
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 125
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 126
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 126
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 126
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 126
+"POST /graphql/ HTTP/1.1" 200 25416
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 127
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 125
+Bad Request: /graphql/
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 125
+"POST /graphql/ HTTP/1.1" 400 127
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 127
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 127
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 125
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 127
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 127
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 125
+Watching for file changes with StatReloader
+Not Found: /main.cbb9ab9b7aa40d1ba5db.hot-update.json
+"GET /main.cbb9ab9b7aa40d1ba5db.hot-update.json HTTP/1.1" 404 2672
+"OPTIONS /graphql/ HTTP/1.1" 200 0
+"OPTIONS /graphql/ HTTP/1.1" 200 0
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 40956
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 40956
+"POST /graphql/ HTTP/1.1" 200 23370
+"POST /graphql/ HTTP/1.1" 200 72660
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 72660
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 72660
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 48214
+"POST /graphql/ HTTP/1.1" 200 72660
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 23370
+"POST /graphql/ HTTP/1.1" 200 208
+"POST /graphql/ HTTP/1.1" 200 72660
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 40956
+"POST /graphql/ HTTP/1.1" 200 72660
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 48214
+"POST /graphql/ HTTP/1.1" 200 72660
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 23370
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 48214
+"POST /graphql/ HTTP/1.1" 200 72660
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 48214
+"POST /graphql/ HTTP/1.1" 200 72660
+"POST /graphql/ HTTP/1.1" 200 23370
+Watching for file changes with StatReloader
+Not Found: /main.8d67d957ec485e97d517.hot-update.json
+"GET /main.8d67d957ec485e97d517.hot-update.json HTTP/1.1" 404 2672
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 23210
+"POST /graphql/ HTTP/1.1" 200 40796
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 23210
+"POST /graphql/ HTTP/1.1" 200 40796
+"POST /graphql/ HTTP/1.1" 200 36977
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 127
+"POST /graphql/ HTTP/1.1" 200 23210
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 127
+"POST /graphql/ HTTP/1.1" 200 36977
+"POST /graphql/ HTTP/1.1" 200 48053
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 127
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 127
+"POST /graphql/ HTTP/1.1" 200 36977
+"POST /graphql/ HTTP/1.1" 200 48053
+"POST /graphql/ HTTP/1.1" 200 36977
+"POST /graphql/ HTTP/1.1" 200 23210
+"POST /graphql/ HTTP/1.1" 200 36977
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 127
+Bad Request: /graphql/
+"POST /graphql/ HTTP/1.1" 400 127
+"POST /graphql/ HTTP/1.1" 200 36977
+"POST /graphql/ HTTP/1.1" 200 48053
+Watching for file changes with StatReloader
+Not Found: /main.bb090528149024027fb3.hot-update.json
+"GET /main.bb090528149024027fb3.hot-update.json HTTP/1.1" 404 2672
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 25416
+"POST /graphql/ HTTP/1.1" 200 40956
+"POST /graphql/ HTTP/1.1" 200 48214
+"POST /graphql/ HTTP/1.1" 200 72660
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 23370
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 23370
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 48214
+"POST /graphql/ HTTP/1.1" 200 72660
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 48214
+"POST /graphql/ HTTP/1.1" 200 72660
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 48214
+"POST /graphql/ HTTP/1.1" 200 72660
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 48214
+"POST /graphql/ HTTP/1.1" 200 72660
+Watching for file changes with StatReloader
+Not Found: /main.40992c8d01584dc42a84.hot-update.json
+"GET /main.40992c8d01584dc42a84.hot-update.json HTTP/1.1" 404 2672
+"POST /graphql/ HTTP/1.1" 200 37138
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 40956
+"POST /graphql/ HTTP/1.1" 200 48214
+"POST /graphql/ HTTP/1.1" 200 72660
+"POST /graphql/ HTTP/1.1" 200 37138
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+Watching for file changes with StatReloader
+Not Found: /main.0db8d97f5c5fa20483df.hot-update.json
+"GET /main.0db8d97f5c5fa20483df.hot-update.json HTTP/1.1" 404 2672
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 40956
+"POST /graphql/ HTTP/1.1" 200 72660
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 48214
+"POST /graphql/ HTTP/1.1" 200 72660
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 23370
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 48214
+"POST /graphql/ HTTP/1.1" 200 72660
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 37138
+Watching for file changes with StatReloader
+Not Found: /main.6e6682e25d13e65e3305.hot-update.json
+"GET /main.6e6682e25d13e65e3305.hot-update.json HTTP/1.1" 404 2672
+"POST /graphql/ HTTP/1.1" 200 37138
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 40956
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 40956
+Watching for file changes with StatReloader
+Not Found: /main.9bec43ed4d241e266089.hot-update.json
+"GET /main.9bec43ed4d241e266089.hot-update.json HTTP/1.1" 404 2672
+"POST /graphql/ HTTP/1.1" 200 37138
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 40956
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 40956
+Watching for file changes with StatReloader
+"POST /graphql/ HTTP/1.1" 200 25416
+"POST /graphql/ HTTP/1.1" 200 25416
+"POST /graphql/ HTTP/1.1" 200 25416
+"POST /graphql/ HTTP/1.1" 200 25416
+Not Found: /manifest.json
+"POST /graphql/ HTTP/1.1" 200 37138
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 40956
+Watching for file changes with StatReloader
+Not Found: /main.c8b1127e5e702db0dc5b.hot-update.json
+"GET /main.c8b1127e5e702db0dc5b.hot-update.json HTTP/1.1" 404 2672
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 40956
+Watching for file changes with StatReloader
+Not Found: /main.9dc6ff2bf00f3a020612.hot-update.json
+"GET /main.9dc6ff2bf00f3a020612.hot-update.json HTTP/1.1" 404 2672
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 40956
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 40956
+"POST /graphql/ HTTP/1.1" 200 23370
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 72660
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 72660
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 48214
+"POST /graphql/ HTTP/1.1" 200 72660
+"POST /graphql/ HTTP/1.1" 200 37138
+Watching for file changes with StatReloader
+Not Found: /main.7230d00b7ced148fdc40.hot-update.json
+"GET /main.7230d00b7ced148fdc40.hot-update.json HTTP/1.1" 404 2672
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 40956
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 40956
+"POST /graphql/ HTTP/1.1" 200 23370
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 72660
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 48214
+"POST /graphql/ HTTP/1.1" 200 72660
+"POST /graphql/ HTTP/1.1" 200 37138
+Watching for file changes with StatReloader
+Not Found: /main.aef3b27c04d03c9d86e2.hot-update.json
+"GET /main.aef3b27c04d03c9d86e2.hot-update.json HTTP/1.1" 404 2672
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 40956
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 40956
+"POST /graphql/ HTTP/1.1" 200 23370
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 72660
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 48214
+"POST /graphql/ HTTP/1.1" 200 72660
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 48214
+"POST /graphql/ HTTP/1.1" 200 72660
+Watching for file changes with StatReloader
+Not Found: /main.40992c8d01584dc42a84.hot-update.json
+"GET /main.40992c8d01584dc42a84.hot-update.json HTTP/1.1" 404 2672
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 40956
+"POST /graphql/ HTTP/1.1" 200 48214
+"POST /graphql/ HTTP/1.1" 200 72660
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 40956
+"POST /graphql/ HTTP/1.1" 200 48214
+"POST /graphql/ HTTP/1.1" 200 72660
+"POST /graphql/ HTTP/1.1" 200 23370
+"POST /graphql/ HTTP/1.1" 200 351
+"POST /graphql/ HTTP/1.1" 200 73020
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 40956
+"POST /graphql/ HTTP/1.1" 200 48214
+"POST /graphql/ HTTP/1.1" 200 73020
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+Watching for file changes with StatReloader
+"POST /graphql/ HTTP/1.1" 200 37138
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 40956
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 40956
+"POST /graphql/ HTTP/1.1" 200 73020
+"POST /graphql/ HTTP/1.1" 200 23370
+Watching for file changes with StatReloader
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 40956
+"POST /graphql/ HTTP/1.1" 200 73020
+"POST /graphql/ HTTP/1.1" 200 23370
+Watching for file changes with StatReloader
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 40956
+"POST /graphql/ HTTP/1.1" 200 73020
+"POST /graphql/ HTTP/1.1" 200 23370
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 8970
+"POST /graphql/ HTTP/1.1" 200 40956
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 73020
+Watching for file changes with StatReloader
+Not Found: /main.232c56d640f9f74afad7.hot-update.json
+"GET /main.232c56d640f9f74afad7.hot-update.json HTTP/1.1" 404 2672
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 40956
+Not Found: /main.232c56d640f9f74afad7.hot-update.json
+"GET /main.232c56d640f9f74afad7.hot-update.json HTTP/1.1" 404 2672
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 40956
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 40956
+"POST /graphql/ HTTP/1.1" 200 73020
+"POST /graphql/ HTTP/1.1" 200 73020
+"POST /graphql/ HTTP/1.1" 200 48214
+Watching for file changes with StatReloader
+"POST /graphql/ HTTP/1.1" 200 23370
+"POST /graphql/ HTTP/1.1" 200 23370
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 40956
+"POST /graphql/ HTTP/1.1" 200 48214
+"POST /graphql/ HTTP/1.1" 200 73020
+"POST /graphql/ HTTP/1.1" 200 23370
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 40956
+"POST /graphql/ HTTP/1.1" 200 23370
+Watching for file changes with StatReloader
+Not Found: /main.f338d6921a95ca018f63.hot-update.json
+"GET /main.f338d6921a95ca018f63.hot-update.json HTTP/1.1" 404 2672
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 40956
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 40956
+"POST /graphql/ HTTP/1.1" 200 73020
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 23370
+"POST /graphql/ HTTP/1.1" 200 23370
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 8970
+"POST /graphql/ HTTP/1.1" 200 40956
+Watching for file changes with StatReloader
+Not Found: /main.41c918d02ad4bc129b83.hot-update.json
+"GET /main.41c918d02ad4bc129b83.hot-update.json HTTP/1.1" 404 2672
+Not Found: /manifest.json
+"POST /graphql/ HTTP/1.1" 200 37138
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 40956
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 48214
+"POST /graphql/ HTTP/1.1" 200 73020
+"POST /graphql/ HTTP/1.1" 200 23370
+Not Found: /main.41c918d02ad4bc129b83.hot-update.json
+"GET /main.41c918d02ad4bc129b83.hot-update.json HTTP/1.1" 404 2672
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 40956
+"POST /graphql/ HTTP/1.1" 200 23370
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 8970
+"POST /graphql/ HTTP/1.1" 200 40956
+Watching for file changes with StatReloader
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+Watching for file changes with StatReloader
+Not Found: /main.446f77c5b4585042d364.hot-update.json
+"GET /main.446f77c5b4585042d364.hot-update.json HTTP/1.1" 404 2672
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 8970
+Not Found: /main.90ccf719d053bbd47142.hot-update.json
+"GET /main.90ccf719d053bbd47142.hot-update.json HTTP/1.1" 404 2672
+"POST /graphql/ HTTP/1.1" 200 40956
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 40956
+"POST /graphql/ HTTP/1.1" 200 48214
+"POST /graphql/ HTTP/1.1" 200 73020
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 8970
+"POST /graphql/ HTTP/1.1" 200 40956
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 73020
+"POST /graphql/ HTTP/1.1" 200 23370
+Watching for file changes with StatReloader
+Not Found: /main.bcd7b0e3bff7b60c1aa6.hot-update.json
+"GET /main.bcd7b0e3bff7b60c1aa6.hot-update.json HTTP/1.1" 404 2672
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+Watching for file changes with StatReloader
+Not Found: /main.bcd7b0e3bff7b60c1aa6.hot-update.json
+"GET /main.bcd7b0e3bff7b60c1aa6.hot-update.json HTTP/1.1" 404 2672
+Not Found: /main.ebbb72c405f7340ed85d.hot-update.json
+"GET /main.ebbb72c405f7340ed85d.hot-update.json HTTP/1.1" 404 2672
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 23370
+Not Found: /manifest.json
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 8970
+"POST /graphql/ HTTP/1.1" 200 40956
+"POST /graphql/ HTTP/1.1" 200 40956
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 48214
+"POST /graphql/ HTTP/1.1" 200 73020
+"POST /graphql/ HTTP/1.1" 200 73020
+Not Found: /manifest.json
+"POST /graphql/ HTTP/1.1" 200 777
+"GET /manifest.json HTTP/1.1" 404 2588
+"POST /graphql/ HTTP/1.1" 200 40956
+"POST /graphql/ HTTP/1.1" 200 73020
+"POST /graphql/ HTTP/1.1" 200 37138
+"POST /graphql/ HTTP/1.1" 200 48214
+"POST /graphql/ HTTP/1.1" 200 23370
+Watching for file changes with StatReloader
+"GET /docs/ HTTP/1.1" 200 1604
+"GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+"GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+"GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 14964
+"GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 145206
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 322863
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1046583
+"GET /docs/?format=openapi HTTP/1.1" 200 13681
+"GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 200 628
+"GET /api/starwars/characters/?page=1&page_size=20 HTTP/1.1" 200 9926
+"GET /api/starwars/planets/ HTTP/1.1" 200 11629
+"GET /redoc/ HTTP/1.1" 200 930
+"GET /static/drf-yasg/style.css HTTP/1.1" 304 0
+"GET /static/drf-yasg/insQ.min.js HTTP/1.1" 304 0
+"GET /static/drf-yasg/redoc-init.js HTTP/1.1" 200 2566
+"GET /static/drf-yasg/redoc/redoc.min.js HTTP/1.1" 200 1042511
+"GET /redoc/?format=openapi HTTP/1.1" 200 13681
+"GET /static/drf-yasg/redoc/redoc-logo.png HTTP/1.1" 200 4969
