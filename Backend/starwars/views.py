@@ -682,3 +682,5 @@ def planets_list_view(request):
             'error': 'Failed to fetch planets',
             'message': str(e)
         }, status=500)
+        
+        
