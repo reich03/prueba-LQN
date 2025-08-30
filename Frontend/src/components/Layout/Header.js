@@ -172,16 +172,7 @@ const Header = ({ onToggleSidebar, sidebarOpen }) => {
       </LeftSection>
 
       <RightSection>
-        <SearchContainer>
-          <SearchIcon size={20} />
-          <SearchInput
-            type="text"
-            placeholder="Search the galaxy..."
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.4, duration: 0.5 }}
-          />
-        </SearchContainer>
+       
 
         <StatusIndicator
           initial={{ opacity: 0, scale: 0.8 }}

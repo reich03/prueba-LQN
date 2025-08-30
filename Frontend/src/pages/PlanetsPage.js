@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useQuery } from '@apollo/client';
-import { 
-  Globe, 
-  Users, 
-  Film, 
+import {
+  Globe,
+  Users,
+  Film,
   Mountain,
   Eye
 } from 'lucide-react';
@@ -333,7 +333,7 @@ const PlanetsPage = () => {
                 animate="visible"
                 exit="hidden"
                 transition={{ delay: index * 0.05, duration: 0.5 }}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.02,
                   transition: { duration: 0.2 }
                 }}
@@ -371,7 +371,7 @@ const PlanetsPage = () => {
                       {planet.orbitalPeriod ? `${planet.orbitalPeriod} days` : 'Unknown'}
                     </DetailValue>
                   </DetailItem>
-                  
+
                   {planet.terrain && (
                     <TerrainSection>
                       <DetailLabel>
@@ -398,14 +398,8 @@ const PlanetsPage = () => {
                       {planet.filmCount || 0} films
                     </StatItem>
                   </div>
-                  
-                  <ViewButton
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <Eye size={16} />
-                    View
-                  </ViewButton>
+
+
                 </PlanetStats>
               </PlanetCard>
             ))}

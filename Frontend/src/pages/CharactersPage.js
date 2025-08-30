@@ -1,19 +1,19 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useQuery } from '@apollo/client';
 import { Link } from 'react-router-dom';
-import { 
-  Search, 
-  Filter, 
-  User, 
-  MapPin, 
-  Film, 
+import {
+  Search,
+  Filter,
+  User,
+  MapPin,
+  Film,
   Eye,
   ChevronLeft,
   ChevronRight
 } from 'lucide-react';
-import { GET_ALL_PEOPLE, SEARCH_PEOPLE } from '../graphql/queries';
+import { GET_ALL_PEOPLE } from '../graphql/queries';
 import { debounce } from 'lodash';
 
 const PageContainer = styled(motion.div)`
@@ -275,7 +275,6 @@ const PaginationButton = styled(motion.button)`
   align-items: center;
   gap: 0.5rem;
   transition: all 0.3s ease;
-  disabled: ${props => props.disabled};
 
   &:hover:not(:disabled) {
     border-color: ${props => props.theme.colors.primary};
@@ -315,42 +314,62 @@ const EmptyState = styled(motion.div)`
   color: ${props => props.theme.colors.textSecondary};
 `;
 
+const SearchResultsText = styled.p`
+  color: ${props => props.theme.colors.textSecondary};
+  margin-bottom: 1rem;
+  text-align: center;
+`;
+
 const CharactersPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 10;
+  const itemsPerPage = 12;
 
-  const { data: allPeopleData, loading: allPeopleLoading } = useQuery(GET_ALL_PEOPLE, {
-    variables: { first: 50 },
-    skip: searchTerm.length > 0
+  const { data, loading, error } = useQuery(GET_ALL_PEOPLE, {
+    variables: { first: 100 }, // Get more data to work with
+    fetchPolicy: 'cache-first',
+    errorPolicy: 'all'
   });
 
-  const { data: searchData, loading: searchLoading } = useQuery(SEARCH_PEOPLE, {
-    variables: { name: searchTerm },
-    skip: !searchTerm
-  });
+  // Client-side search implementation
+  const allCharacters = useMemo(() => {
+    return data?.allPeople?.edges?.map(edge => edge.node) || [];
+  }, [data]);
 
+  const filteredCharacters = useMemo(() => {
+    if (!searchTerm.trim()) {
+      return allCharacters;
+    }
+
+    const searchLower = searchTerm.toLowerCase();
+    return allCharacters.filter(character => {
+      return (
+        character.name?.toLowerCase().includes(searchLower) ||
+        character.homeworld?.name?.toLowerCase().includes(searchLower) ||
+        character.gender?.toLowerCase().includes(searchLower) ||
+        character.eyeColor?.toLowerCase().includes(searchLower) ||
+        character.hairColor?.toLowerCase().includes(searchLower)
+      );
+    });
+  }, [allCharacters, searchTerm]);
+
+  // Debounced search handler
   const debouncedSearch = useCallback(
     debounce((value) => {
       setSearchTerm(value);
       setCurrentPage(1);
     }, 300),
-    [debounce]
+    []
   );
 
   const handleSearchChange = (e) => {
     debouncedSearch(e.target.value);
   };
 
-  const characters = searchTerm 
-    ? searchData?.searchPeople || []
-    : allPeopleData?.allPeople?.edges?.map(edge => edge.node) || [];
-
-  const totalPages = Math.ceil(characters.length / itemsPerPage);
+  // Pagination calculations
+  const totalPages = Math.ceil(filteredCharacters.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
-  const paginatedCharacters = characters.slice(startIndex, startIndex + itemsPerPage);
-
-  const loading = searchTerm ? searchLoading : allPeopleLoading;
+  const paginatedCharacters = filteredCharacters.slice(startIndex, startIndex + itemsPerPage);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -366,6 +385,32 @@ const CharactersPage = () => {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0 }
   };
+
+  if (loading) {
+    return (
+      <PageContainer>
+        <LoadingContainer>
+          <LoadingSpinner />
+        </LoadingContainer>
+      </PageContainer>
+    );
+  }
+
+  if (error) {
+    return (
+      <PageContainer>
+        <EmptyState
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <User size={64} style={{ margin: '0 auto 1rem', opacity: 0.5 }} />
+          <h3>Error loading characters</h3>
+          <p>Please try again later.</p>
+        </EmptyState>
+      </PageContainer>
+    );
+  }
 
   return (
     <PageContainer
@@ -408,11 +453,14 @@ const CharactersPage = () => {
         </SearchSection>
       </Header>
 
-      {loading ? (
-        <LoadingContainer>
-          <LoadingSpinner />
-        </LoadingContainer>
-      ) : paginatedCharacters.length === 0 ? (
+      {searchTerm && (
+        <SearchResultsText>
+          Found {filteredCharacters.length} character{filteredCharacters.length !== 1 ? 's' : ''}
+          {searchTerm ? ` matching "${searchTerm}"` : ''}
+        </SearchResultsText>
+      )}
+
+      {paginatedCharacters.length === 0 ? (
         <EmptyState
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -434,7 +482,7 @@ const CharactersPage = () => {
                   animate="visible"
                   exit="hidden"
                   transition={{ delay: index * 0.05, duration: 0.5 }}
-                  whileHover={{ 
+                  whileHover={{
                     scale: 1.02,
                     transition: { duration: 0.2 }
                   }}
@@ -445,7 +493,7 @@ const CharactersPage = () => {
                     </CharacterAvatar>
                     <div>
                       <CharacterName>{character.name}</CharacterName>
-                      {character.gender && (
+                      {character.gender && character.gender !== 'n/a' && (
                         <CharacterGender>{character.gender}</CharacterGender>
                       )}
                     </div>
@@ -454,11 +502,19 @@ const CharactersPage = () => {
                   <CharacterDetails>
                     <DetailItem>
                       <DetailLabel>Height</DetailLabel>
-                      <DetailValue>{character.height || 'Unknown'} cm</DetailValue>
+                      <DetailValue>
+                        {character.height && character.height !== 'unknown'
+                          ? `${character.height} cm`
+                          : 'Unknown'}
+                      </DetailValue>
                     </DetailItem>
                     <DetailItem>
                       <DetailLabel>Mass</DetailLabel>
-                      <DetailValue>{character.mass || 'Unknown'} kg</DetailValue>
+                      <DetailValue>
+                        {character.mass && character.mass !== 'unknown'
+                          ? `${character.mass} kg`
+                          : 'Unknown'}
+                      </DetailValue>
                     </DetailItem>
                     <DetailItem>
                       <DetailLabel>Birth Year</DetailLabel>
@@ -478,17 +534,37 @@ const CharactersPage = () => {
                       </StatItem>
                       <StatItem style={{ marginTop: '0.5rem' }}>
                         <Film size={16} />
-                        {character.filmCount || 0} films
+                        {character.films?.edges?.length || character.filmCount || 0} films
                       </StatItem>
                     </div>
-                    
-                    <ViewButton 
+
+                    {/* <ViewButton 
                       to={`/characters/${character.id}`}
                       onClick={(e) => e.stopPropagation()}
                     >
                       <Eye size={16} />
                       View
-                    </ViewButton>
+                    </ViewButton> */}
+                    <a
+                      href={`/characters/${character.id}`}
+                      style={{
+                        textDecoration: 'none',
+                        zIndex: 1000000,
+                        background: 'linear-gradient(135deg, #ff7e5f, #feb47b)',
+                        color: '#fff',
+                        padding: '0.5rem 1rem',
+                        borderRadius: '20px',
+                        fontWeight: 600,
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '0.5rem',
+                        transition: 'all 0.3s ease',
+                        cursor: 'pointer'
+                      }}
+                    >
+                      <Eye size={16} />
+                      View
+                    </a>
                   </CharacterStats>
                 </CharacterCard>
               ))}

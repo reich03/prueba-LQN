@@ -255,3 +255,39 @@ export const GET_FILM_DETAIL = gql`
     }
   }
 `;
+
+export const GET_PLANET_DETAIL = gql`
+  query GetPlanetDetail($id: ID!) {
+    planet(id: $id) {
+      id
+      name
+      rotationPeriod
+      orbitalPeriod
+      diameter
+      climate
+      gravity
+      terrain
+      surfaceWater
+      population
+      residentCount
+      filmCount
+      residents {
+        edges {
+          node {
+            id
+            name
+          }
+        }
+      }
+      films {
+        edges {
+          node {
+            id
+            title
+            episodeId
+          }
+        }
+      }
+    }
+  }
+`;

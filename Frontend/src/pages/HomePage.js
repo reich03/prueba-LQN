@@ -229,31 +229,33 @@ const LoadingSpinner = styled(motion.div)`
 
 const HomePage = () => {
   const { data: peopleData, loading: peopleLoading } = useQuery(GET_ALL_PEOPLE, { 
-    variables: { first: 1 } 
+    variables: { first: 100 } // Request more to get actual count
   });
+  
   const { data: filmsData, loading: filmsLoading } = useQuery(GET_ALL_FILMS, { 
-    variables: { first: 1 } 
+    variables: { first: 20 }
   });
+  
   const { data: planetsData, loading: planetsLoading } = useQuery(GET_ALL_PLANETS, { 
-    variables: { first: 1 } 
+    variables: { first: 100 }
   });
 
   const stats = [
     {
       icon: Users,
-      number: peopleLoading ? '...' : peopleData?.allPeople?.edges?.length || '0',
+      number: peopleLoading ? '...' : (peopleData?.allPeople?.totalCount || peopleData?.allPeople?.edges?.length || '0'),
       label: 'Characters',
       color: '#FFD700'
     },
     {
       icon: Film,
-      number: filmsLoading ? '...' : filmsData?.allFilms?.edges?.length || '0',
+      number: filmsLoading ? '...' : (filmsData?.allFilms?.totalCount || filmsData?.allFilms?.edges?.length || '0'),
       label: 'Films',
       color: '#ff6b35'
     },
     {
       icon: Globe,
-      number: planetsLoading ? '...' : planetsData?.allPlanets?.edges?.length || '0',
+      number: planetsLoading ? '...' : (planetsData?.allPlanets?.totalCount || planetsData?.allPlanets?.edges?.length || '0'),
       label: 'Planets',
       color: '#00ff88'
     }

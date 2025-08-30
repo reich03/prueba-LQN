@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useQuery } from '@apollo/client';
 import { Link } from 'react-router-dom';
-import { 
-  Film, 
-  Calendar, 
-  User, 
-  Globe, 
+import {
+  Film,
+  Calendar,
+  User,
+  Globe,
   Eye
 } from 'lucide-react';
 import { GET_ALL_FILMS } from '../graphql/queries';
@@ -180,7 +180,7 @@ const StatItem = styled.div`
   font-size: 0.9rem;
 `;
 
-const ViewButton = styled(Link)`
+const ViewButton = styled.div`
   background: linear-gradient(135deg, ${props => props.theme.colors.primary}, ${props => props.theme.colors.accent});
   color: ${props => props.theme.colors.secondary};
   text-decoration: none;
@@ -191,6 +191,7 @@ const ViewButton = styled(Link)`
   align-items: center;
   gap: 0.5rem;
   transition: all 0.3s ease;
+  cursor: pointer;
 
   &:hover {
     transform: scale(1.05);
@@ -322,7 +323,7 @@ const FilmsPage = () => {
                 animate="visible"
                 exit="hidden"
                 transition={{ delay: index * 0.05, duration: 0.5 }}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.02,
                   transition: { duration: 0.2 }
                 }}
@@ -366,21 +367,45 @@ const FilmsPage = () => {
                       {film.planetCount || 0} planets
                     </StatItem>
                   </div>
-                  
-                  <ViewButton 
+
+                  {/* <ViewButton
                     to={`/films/${film.id}`}
-                    onClick={(e) => e.stopPropagation()}
+                    onClick={(e) => {
+                      console.log(`View button clicked for film id: ${film.id}`);
+                    }}
                   >
                     <Eye size={16} />
                     View
-                  </ViewButton>
-                </FilmStats>
+                  </ViewButton> */}
+                  <a
+                    href={`/films/${film.id}`}
+                    style={{
+                      textDecoration: 'none',
+                      zIndex: 1000000,
+                      background: 'linear-gradient(135deg, #ff7e5f, #feb47b)',
+                      color: '#fff',
+                      padding: '0.5rem 1rem',
+                      borderRadius: '20px',
+                      fontWeight: 600,
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '0.5rem',
+                      transition: 'all 0.3s ease',
+                      cursor: 'pointer'
+                    }}
+                  >
+                    <Eye size={16} />
+                    View
+                  </a>
+
+              </FilmStats>
               </FilmCard>
             ))}
-          </AnimatePresence>
+        </AnimatePresence>
         </FilmGrid>
-      )}
-    </PageContainer>
+  )
+}
+    </PageContainer >
   );
 };
 

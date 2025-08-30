@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -11,6 +11,7 @@ import {
   Star,
   Zap
 } from 'lucide-react';
+import AddCharacterModal from '../AddCharacterModal ';
 
 const SidebarContainer = styled(motion.nav)`
   position: fixed;
@@ -166,14 +167,7 @@ const FooterSection = styled.div`
   text-align: center;
 `;
 
-const PoweredBy = styled(motion.div)`
-  font-size: 0.8rem;
-  color: ${props => props.theme.colors.textSecondary};
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-`;
+
 
 const navItems = [
   {
@@ -200,6 +194,7 @@ const navItems = [
 
 const Sidebar = ({ isOpen }) => {
   const location = useLocation();
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const sidebarVariants = {
     open: { width: '280px' },
@@ -211,106 +206,106 @@ const Sidebar = ({ isOpen }) => {
     closed: { opacity: 0, x: -20 }
   };
 
+  const handleAddClick = () => {
+    setIsModalOpen(true);
+  };
+
   return (
-    <SidebarContainer
-      isOpen={isOpen}
-      initial={{ x: -300 }}
-      animate={{ x: 0 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      variants={sidebarVariants}
-    >
-      <LogoSection>
-        <LogoIcon
-          whileHover={{ scale: 1.1, rotate: 180 }}
-          transition={{ duration: 0.3 }}
-        >
-          <Star size={28} color="#000" />
-        </LogoIcon>
-        <AnimatePresence>
-          {isOpen && (
-            <LogoText
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.3 }}
-            >
-              SW Galaxy
-            </LogoText>
-          )}
-        </AnimatePresence>
-      </LogoSection>
-
-      <NavSection>
-        {navItems.map((item, index) => {
-          const isActive = location.pathname === item.path;
-          const IconComponent = item.icon;
-          
-          return (
-            <NavItem
-              key={item.path}
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: index * 0.1 + 0.2, duration: 0.5 }}
-              whileHover={{ scale: 1.02 }}
-            >
-              <NavLink to={item.path} isActive={isActive}>
-                <NavIcon showText={isOpen}>
-                  <IconComponent size={24} />
-                </NavIcon>
-                <AnimatePresence>
-                  {isOpen && (
-                    <NavText
-                      variants={textVariants}
-                      initial="closed"
-                      animate="open"
-                      exit="closed"
-                      transition={{ duration: 0.2 }}
-                    >
-                      {item.label}
-                    </NavText>
-                  )}
-                </AnimatePresence>
-              </NavLink>
-            </NavItem>
-          );
-        })}
-
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.8 }}
-              transition={{ delay: 0.6, duration: 0.3 }}
-            >
-              <AddButton
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+    <>
+      <SidebarContainer
+        isOpen={isOpen}
+        initial={{ x: -300 }}
+        animate={{ x: 0 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        variants={sidebarVariants}
+      >
+        <LogoSection>
+          <LogoIcon
+            whileHover={{ scale: 1.1, rotate: 180 }}
+            transition={{ duration: 0.3 }}
+          >
+            <Star size={28} color="#000" />
+          </LogoIcon>
+          <AnimatePresence>
+            {isOpen && (
+              <LogoText
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.3 }}
               >
-                <Plus size={20} />
-                Add New
-              </AddButton>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </NavSection>
+                SW Galaxy
+              </LogoText>
+            )}
+          </AnimatePresence>
+        </LogoSection>
 
-      <FooterSection>
-        <AnimatePresence>
-          {isOpen && (
-            <PoweredBy
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ delay: 0.7, duration: 0.3 }}
-            >
-              <Zap size={16} />
-              Powered by GraphQL
-            </PoweredBy>
-          )}
-        </AnimatePresence>
-      </FooterSection>
-    </SidebarContainer>
+        <NavSection>
+          {navItems.map((item, index) => {
+            const isActive = location.pathname === item.path;
+            const IconComponent = item.icon;
+            
+            return (
+              <NavItem
+                key={item.path}
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.1 + 0.2, duration: 0.5 }}
+                whileHover={{ scale: 1.02 }}
+              >
+                <NavLink to={item.path} isActive={isActive}>
+                  <NavIcon showText={isOpen}>
+                    <IconComponent size={24} />
+                  </NavIcon>
+                  <AnimatePresence>
+                    {isOpen && (
+                      <NavText
+                        variants={textVariants}
+                        initial="closed"
+                        animate="open"
+                        exit="closed"
+                        transition={{ duration: 0.2 }}
+                      >
+                        {item.label}
+                      </NavText>
+                    )}
+                  </AnimatePresence>
+                </NavLink>
+              </NavItem>
+            );
+          })}
+
+          <AnimatePresence>
+            {isOpen && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                transition={{ delay: 0.6, duration: 0.3 }}
+              >
+                <AddButton
+                  onClick={handleAddClick}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Plus size={20} />
+                  Add New
+                </AddButton>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </NavSection>
+
+        <FooterSection>
+         
+        </FooterSection>
+      </SidebarContainer>
+
+      <AddCharacterModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
+    </>
   );
 };
 

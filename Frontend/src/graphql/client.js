@@ -7,14 +7,9 @@ const httpLink = createHttpLink({
 });
 
 const authLink = setContext((_, { headers }) => {
-  // Si implementas JWT más tarde, descomenta esto:
-  // const token = localStorage.getItem('authToken');
   return {
     headers: {
       ...headers,
-      // Si Django requiere CSRF, podrías agregarlo aquí:
-      // 'X-CSRFToken': getCookie('csrftoken'),
-      // authorization: token ? `JWT ${token}` : "",
     }
   }
 });
